@@ -15,7 +15,6 @@ The task itself is described in [`project-description.md`](project-description.m
 | `src/pipeline.py` | The reusable pipeline: `run_pipeline()` loads, cleans, splits, builds the features and trains the model |
 | `api/` | The FastAPI app (create, read, update, delete houses) with its `Dockerfile` and `docker-compose.yaml`, see [`api/README.md`](api/README.md) |
 | `tests/` | 35 tests for the functions, the pipeline parts and the API |
-| `bonus_solution/` | Reference material of the template for the optional tasks (not part of my work) |
 | `data/` | The King County data set |
 | `model/` | The model saved by the original notebook |
 
