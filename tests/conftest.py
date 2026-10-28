@@ -1,5 +1,11 @@
-import pandas as pd
-import pytest
+import os
+
+# The API reads DB_CONN at import time. Force an in-memory database so tests
+# can never touch a real one, even if a local .env exists.
+os.environ["DB_CONN"] = "sqlite://"
+
+import pandas as pd  # noqa: E402
+import pytest  # noqa: E402
 
 
 @pytest.fixture

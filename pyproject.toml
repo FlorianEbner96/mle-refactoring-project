@@ -12,7 +12,15 @@ dependencies = [
 ]
 
 [dependency-groups]
+api = [
+    "fastapi>=0.162.0",
+    "psycopg[binary]>=3.3.6",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy>=2.1.6",
+    "uvicorn>=0.54.0",
+]
 dev = [
+    "httpx>=0.28.1",
     "ipykernel>=7.3.0",
     "nbformat>=5.11.1",
     "pytest>=9.2.0",
@@ -20,6 +28,8 @@ dev = [
 
 [tool.uv]
 required-version = ">=0.13.5"
+# Locally install dev tools and the API dependencies; Docker will install only `api`.
+default-groups = ["dev", "api"]
 # Apply certificate fixes without adding unused runtime packages.
 constraint-dependencies = ["certifi>=2026.10.19", "pip>=26.2.2"]
 

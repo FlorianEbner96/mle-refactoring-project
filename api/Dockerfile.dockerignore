@@ -1,0 +1,6 @@
+# The image needs only locked dependency metadata and the api package.
+**
+!pyproject.toml
+!uv.lock
+!api/
+!api/*.py
